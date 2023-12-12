@@ -1,5 +1,4 @@
 # Secure Application for Electronic Health Records with MERN Stack
-![Screenshot 2023-12-12 221432](https://github.com/abhishekverma276/SecuEHR/assets/96565154/bf1900d8-e88c-42ab-a0b6-fe3ef0d0ffc2)
 ![Screenshot 2023-12-12 221448](https://github.com/abhishekverma276/SecuEHR/assets/96565154/1cc690aa-cd38-459b-8354-ea28ca19e0e0)
 ![Screenshot 2023-12-12 221505](https://github.com/abhishekverma276/SecuEHR/assets/96565154/3d9f1c07-439e-4560-befa-4d5cc65b0143)
 ![Screenshot 2023-12-12 221529](https://github.com/abhishekverma276/SecuEHR/assets/96565154/1b25b741-8f91-46f7-b662-96ab9c13a8d8)
