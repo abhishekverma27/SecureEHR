@@ -49,8 +49,8 @@ This project uses the following technologies:
 - [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend
 - [MongoDB](https://www.mongodb.com/) for the database
 - [Bootstrap](https://getbootstrap.com/) for styling
-- [Advanced Encryption Standard(AES)] for storing encryptied data to DB.
-- [SHA-256] for storing hashed passwords.
+- [Advanced Encryption Standard(AES)] algorithm for storing encryptied data to DB.
+- [SHA-256] hashing algorithm for storing hashed passwords.
 - [Login Limiter] to prevent brute force attacks.
 <br/>
 
