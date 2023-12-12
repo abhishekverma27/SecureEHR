@@ -51,6 +51,7 @@ This project uses the following technologies:
 - [Bootstrap](https://getbootstrap.com/) for styling
 - [Advanced Encryption Standard(AES)] for storing encryptied data to DB.
 - [SHA-256] for storing hashed passwords.
+- [Login Limiter] to prevent brute force attacks.
 <br/>
 
 <h2> Do not forget to give a star! ⭐🤗 </h2>
