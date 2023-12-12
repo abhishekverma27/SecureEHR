@@ -37,7 +37,7 @@ Go to the link below for installation if you don't have installed yet.
 
 
 
-## 🛠️ Technology Used
+## 🛠️ Technology Used :
 
 This project uses the following technologies:
 
@@ -45,7 +45,8 @@ This project uses the following technologies:
 - [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend
 - [MongoDB](https://www.mongodb.com/) for the database
 - [Bootstrap](https://getbootstrap.com/) for styling
-
+- [Advanced Encryption Standard(AES)] for storing encryptied data to DB.
+- [SHA-256] for storing hashed passwords.
 <br/>
 
 <h2> Do not forget to give a star! ⭐🤗 </h2>
