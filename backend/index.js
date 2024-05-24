@@ -13,7 +13,12 @@ require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://secuehr.vercel.app', // Allow specific origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+}));
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI, {
