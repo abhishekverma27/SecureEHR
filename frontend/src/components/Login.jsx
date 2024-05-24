@@ -17,7 +17,7 @@ const Login = () => {
     setShowAnimation(true);
 
     axios
-      .post('https://secuehrbackend-hy1spu6d6-abhishekverma276s-projects.vercel.app/login', { email, password, role }) // Updated URL
+      .post('https://secuehrbackend.vercel.app/login', { email, password, role }) // Updated URL
       .then((result) => {
         console.log(result);
         if (result.data === 'Success') {
