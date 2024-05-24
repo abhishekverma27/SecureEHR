@@ -14,11 +14,13 @@ require('dotenv').config(); // Load environment variables from .env file
 const app = express();
 app.use(express.json());
 
-app.options('/login', (req, res) => {
+// Enable CORS for all origins
+app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://secuehr.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  res.status(200).end();
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
 });
 
 
@@ -246,6 +248,13 @@ app.delete('/appointments/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
+});
+
+app.options('/login', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://secuehr.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.status(200).end();
 });
 
 app.post('/login', loginLimiter, async (req, res) => {
