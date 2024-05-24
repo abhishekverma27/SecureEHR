@@ -9,14 +9,20 @@ const DoctorModel = require('./models/Doctor');
 const AppointmentModel = require('./models/Appointments.js');
 const MedicalRecordModel = require('./models/healthrecords.js');
 const { encrypt, decrypt } = require('./encryption'); // Import the encryption functions
+require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/practice_mern', {
+// Connect to MongoDB Atlas
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB Atlas');
+}).catch((err) => {
+  console.error('Error connecting to MongoDB Atlas:', err);
 });
 
 const loginAttempts = new Map();
