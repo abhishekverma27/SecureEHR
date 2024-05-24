@@ -14,11 +14,13 @@ require('dotenv').config(); // Load environment variables from .env file
 const app = express();
 app.use(express.json());
 
-const corsOptions = {
-  origin: 'https://secuehr.vercel.app', // frontend URL
-  methods: 'GET,POST,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-};
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://secuehr.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 // Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI, {
